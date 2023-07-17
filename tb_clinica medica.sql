@@ -78,6 +78,7 @@ insert into paciente values('123.456.789-12','Bruna Alvez','(15)92345-6789',2345
 insert into paciente values('234.567.890-23','Gilberto Barros','(11)94567-8901',345678,'Inovamed','Especial');
 insert into paciente values('345.678.901-45','Maria Pereira','(12)95678-9012',456789,'Ultramed','Padrão');
 insert into paciente values('456.789.012-34','Arnaldo Coelho','(19)96789-0123',567890,'Inovamed','Especial');
+insert into paciente values ('080.733.239-90', 'Danielle de Paula Mauro', '(41)98843-5498',123456,'Bradesco','Basico');
 
 select * from paciente;
 
@@ -119,6 +120,7 @@ insert into consulta values('2022/12/19','16:45','234.567.890-23',102030);
 insert into consulta values('2022/12/19','18:00','345.678.901-45',607080);
 insert into consulta values('2022/12/20','09:00','012.345.678-90',304050);
 insert into consulta values('2022/12/20','14:20','123.456.789-12',102030);
+insert into consulta values('2023/07/17','14:20','080.733.239-90',102030);
 
 select * from consulta;
 
@@ -158,10 +160,15 @@ select * from exame;
 update exame set preco = 135.00 where codigo = 10110;
 select * from exame;
 
+
 -- Exclusão de registros de tabelas --------------------------
 
 select * from paciente;
 delete from paciente where cpf = '456.789.012-34';
+select * from paciente;
+
+select * from paciente;
+delete from paciente where cpf = '080.733.239-90';
 select * from paciente;
 
 select * from medico;
